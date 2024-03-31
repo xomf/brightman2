@@ -15,8 +15,10 @@ int main( int argc, char* argv[] ) {
         size_t level = atoi(argv[1]);
         if (level >= 0 && level <= 100) {
             set_backlight_level(&backlights->items[bl_id], level);
+            free_backlights(backlights);
             return 0;
         } else {
+            free_backlights(backlights);
             eprintf("ERROR: Invalid level\n");
             return 1;
         }
