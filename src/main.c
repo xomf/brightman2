@@ -9,6 +9,11 @@ int main( int argc, char* argv[] ) {
 
     // TODO: Implement backlight switching, maybe
     backlights_t* backlights = get_backlights();
+
+    if (!backlights) {
+        return 1;
+    }
+
     size_t bl_id = 0;
 
     if (argc > 1) {
