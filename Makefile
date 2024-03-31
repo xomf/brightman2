@@ -8,7 +8,8 @@ BUILD_DIR=./build
 BIN=$(BUILD_DIR)/brightman
 
 OBJS= \
-	$(BUILD_DIR)/main.o
+	$(BUILD_DIR)/main.o \
+	$(BUILD_DIR)/blmgr.o
 
 
 all: $(BIN)
